@@ -357,7 +357,7 @@ function update() {
         }
         // Remove offscreen fingers
         fingers.forEachAlive(function(finger) {
-            if (finger.x + 25 < game.world.bounds.left) {  // finger.width == 30
+            if (finger.x + 20 < game.world.bounds.left) {  // finger.width == 30
                 finger.kill();
             }
         });
