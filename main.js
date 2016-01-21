@@ -18,7 +18,7 @@ WebFontConfig = {
     wf.async = 'true';
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(wf, s);
-})(); 
+})();
 
 
 function main() {
@@ -357,7 +357,7 @@ function update() {
         }
         // Remove offscreen fingers
         fingers.forEachAlive(function(finger) {
-            if (finger.x + finger.width < game.world.bounds.left) {
+            if (finger.x + 30 < game.world.bounds.left) {  // finger.width == 30
                 finger.kill();
             }
         });
