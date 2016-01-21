@@ -49,7 +49,7 @@ function preload() {
             clouds: ['assets/clouds.png', 128, 64]
         },
         image: {
-            finger: ['assets/finger.png'],
+            finger: ['assets/finger.png', 30, 90],
             fence: ['assets/fence.png']
         },
         audio: {
@@ -357,7 +357,7 @@ function update() {
         }
         // Remove offscreen fingers
         fingers.forEachAlive(function(finger) {
-            if (finger.x + 20 < game.world.bounds.left) {  // finger.width == 30
+            if (finger.x + finger.width < game.world.bounds.left) {
                 finger.kill();
             }
         });
