@@ -49,7 +49,7 @@ function preload() {
             clouds: ['assets/clouds.png', 128, 64]
         },
         image: {
-            finger: ['assets/finger.png', 30, 90],
+            finger: ['assets/finger.png', 90, 30],
             fence: ['assets/fence.png']
         },
         audio: {
