@@ -171,7 +171,8 @@ function create() {
     scoreSnd = game.add.audio('score');
     hurtSnd = game.add.audio('hurt');
     // Add controls
-    //game.input.onDown.add(flap);
+    game.input.onDown.add(flap);
+    game.input.keyboard.add(flap);
     // Start clouds timer
     cloudsTimer = new Phaser.Timer(game);
     cloudsTimer.onEvent.add(spawnCloud);
