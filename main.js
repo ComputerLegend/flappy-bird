@@ -172,7 +172,11 @@ function create() {
     hurtSnd = game.add.audio('hurt');
     // Add controls
     game.input.onDown.add(flap);
-    //game.input.Keyboard.add(flap);
+    // add keyboard controls
+    flapKey = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+    flapKey.onDown.add(flap);
+    // keep the spacebar from propogating up to the browser     
+    game.input.keyboard.addKeyCapture([Phaser.Keyboard.SPACEBAR]);
     // Start clouds timer
     cloudsTimer = new Phaser.Timer(game);
     cloudsTimer.onEvent.add(spawnCloud);
